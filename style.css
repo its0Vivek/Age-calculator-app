@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Poppins;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsbold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppinsebold;
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: poppinsibold;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    /* background-color: rebeccapurple; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box {
+    width: 44vw;
+    height: 32vw;
+    border-radius: 30px;
+    border-bottom-right-radius: 11.8vw;
+    /* border-bottom-right-radius: 180px; */
+    background-color: #FFFFFF;
+    padding: 2.7vw;
+    position: relative;
+}
+
+#circle {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: #864CFF;
+    position: absolute;
+    top: 24%;
+    right: 6%;
+    padding: 1.64vw;
+}
+
+#circle img {
+    object-fit: cover;
+    object-position: center;
+}
+
+#birthDate {
+    width: 68%;
+    height: 30%;
+    /* background-color: royalblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#birthDate h3 {
+    color: #727272;
+    font-size: .8vw;
+    letter-spacing: 2px;
+    font-family: 'poppinsbold';
+    font-weight: 700;
+
+}
+
+input {
+    width: 7.5vw;
+    height: 3.5vw;
+    border-radius: 10px;
+    border: 1.5px solid #727272;
+    opacity: 50%;
+    margin: .4vw 0vw;
+    font-family: poppinsebold;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+#result {
+    width: 100%;
+    height: 70%;
+    padding: 2vw 0vw;
+    border-top: 2px solid #dadada;
+}
+
+#result h1 {
+    font-size: 5vw;
+    font-family: poppinsibold;
+    line-height: 5.5vw
+}
+
+#result h1 span {
+    color: #864CFF;
+}
