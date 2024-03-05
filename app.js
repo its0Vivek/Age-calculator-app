@@ -1,10 +1,11 @@
-let day = document.querySelector("#day");
-// let month = document.querySelector("");
-// let year = document.querySelector("");
+let day = document.querySelector("#day-input");
+let month = document.querySelector("#month-input");
+let year = document.querySelector("#year-input");
+let circle = document.querySelector("#circle");
 
-
-day.addEventListener("input", function () {
-    console.log(day.value)
-})
-
+circle.addEventListener("click", function () {
+    console.log(month.value);
+    console.log(month.value);
+    console.log(year.value);
+});
 
