@@ -14,7 +14,8 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
-      font-size: 11px;
+      margin-top: 3vw;
+      font-size: 1vw;
       text-align: center;
     }
 
@@ -25,7 +26,6 @@
 </head>
 
 <body>
-
   <div id="main">
     <div id="container">
       <div id="box">
@@ -33,15 +33,15 @@
         <div id="birthDate">
           <div id="day">
             <h3>DAY</h3>
-            <input type="number" placeholder="DD">
+            <input id="day" type="number" placeholder="DD" min="0" max="31">
           </div>
           <div id="month">
             <h3>MONTH</h3>
-            <input type="number" placeholder="MM">
+            <input type="number" placeholder="MM" min="0" max="12">
           </div>
           <div id="year">
             <h3>YEAR</h3>
-            <input type="number" placeholder="YYYY">
+            <input type="number" placeholder="YYYY" min="1900" max="2100">
           </div>
         </div>
         <div id="result">
@@ -50,35 +50,13 @@
           <h1><span>- -</span> days</h1>
         </div>
       </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/its0Vivek">its0Vivek</a>.
+        <script src="./app.js"></script>
+      </div>
     </div>
   </div>
-
-  </div>
-
-
-
-
-
-
-
-
-  <!-- Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-    <script src="./app.js"></script>
   </div>
 </body>
 
