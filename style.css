@@ -49,6 +49,18 @@ body {
     flex-direction: column;
 }
 
+#h1 {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    background: -webkit-linear-gradient(#864CFF, #808080);
+    -webkit-background-clip: text;
+    /* Webkit/Blink browsers */
+    color: transparent;
+    font-family: 'poppinsebold';
+}
+
+
+
 #box {
     width: 44vw;
     height: 32vw;
@@ -74,6 +86,38 @@ body {
 #circle img {
     object-fit: cover;
     object-position: center;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+}
+
+#dayerr {
+    margin-left: .5vw;
+    padding-top: .3vw;
+    font-style: italic;
+    font-size: 0.7vw;
+    color: #E2575D;
+    display: none;
+}
+
+#montherr {
+    margin-left: .5vw;
+    padding-top: .3vw;
+    font-style: italic;
+    font-size: 0.7vw;
+    color: #E2575D;
+    display: none;
+}
+
+#yearerr {
+    margin-left: .5vw;
+    padding-top: .3vw;
+    font-style: italic;
+    font-size: 0.7vw;
+    color: #E2575D;
+    display: none;
 }
 
 #birthDate {

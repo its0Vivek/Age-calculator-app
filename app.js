@@ -5,25 +5,50 @@ const circle = document.querySelector("#circle");
 const Fday = document.querySelector("#Fday");
 const Fmonth = document.querySelector("#Fmonth");
 const Fyear = document.querySelector("#Fyear");
+const errorMessages = document.querySelectorAll("h5");
+const allInputs = document.querySelectorAll("input");
 
 circle.addEventListener("click", function () {
-    const getDay = day.value;
-    const getMonth = month.value;
-    const getYear = year.value;
+    const getDay = parseInt(day.value);
+    const getMonth = parseInt(month.value);
+    const getYear = parseInt(year.value);
 
-    if (!getDay > 1 || !getDay < 31) {
-        alert("not valid")
+    // Error handling for invalid day, month, and year
+    if (!(getDay >= 1 && getDay <= 31)) {
+        document.querySelector("#dayerr").style.display = "initial";
+        document.querySelector("#zday").style.color = "red";
+        day.style.border = "1.5px solid red";
+        return;
+    } else {
+        document.querySelector("#dayerr").style.display = "none";
+        document.querySelector("#zday").style.color = "black";
+        day.style.border = "1.5px solid #727272";
     }
-    if (!getMonth > 1 || !getMonth < 12) {
-        alert("not valid")
+    if (!(getMonth >= 1 && getMonth <= 12)) {
+        document.querySelector("#montherr").style.display = "initial";
+        document.querySelector("#zmonth").style.color = "red";
+        month.style.border = "1.5px solid red";
+        return;
+    } else {
+        document.querySelector("#montherr").style.display = "none";
+        document.querySelector("#zmonth").style.color = "black";
+        month.style.border = "1.5px solid #727272";
     }
-    if (!getYear > 19 || !getYear < 31) {
-        alert("not valid")
+    if (!(getYear >= 1900 && getYear <= 2023)) {
+        document.querySelector("#yearerr").style.display = "initial";
+        document.querySelector("#zyear").style.color = "red";
+        year.style.border = "1.5px solid red";
+        return;
+    } else {
+        document.querySelector("#yearerr").style.display = "none";
+        document.querySelector("#zyear").style.color = "black";
+        year.style.border = "1.5px solid #727272";
     }
-    console.log(verify)
+
+    // Reset border style for all inputs
+    allInputs.forEach(input => input.style.border = "1.5px solid #727272");
 
     const getedBirthDay = `${getYear}-${getMonth}-${getDay}`;
-    console.log(getedBirthDay)
 
     // Calculate age
     const age = calculateAge(getedBirthDay);
@@ -40,8 +65,6 @@ function calculateAge(birthDate) {
 
     // Parse the birth date string to create a Date object
     const birthDateObj = new Date(birthDate);
-    console.log(birthDateObj)
-
 
     // Check if the birth date is valid
     if (isNaN(birthDateObj.getTime())) {

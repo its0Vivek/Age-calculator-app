@@ -28,20 +28,24 @@
 <body>
   <div id="main">
     <div id="container">
+      <div id="h1"> Age calculator</div>
       <div id="box">
         <div id="circle"><img src="./assets/images/icon-arrow.svg" alt=""></div>
         <div id="birthDate">
-          <div id="day">
-            <h3>DAY</h3>
+          <div class="error" id="day">
+            <h3 id="zday">DAY</h3>
             <input id="day-input" type="text" placeholder="DD" min="0" max="31">
+            <h5 id="dayerr">Must be valid Date </h5>
           </div>
-          <div id="month">
-            <h3>MONTH</h3>
+          <div class="error" id="month">
+            <h3 id="zmonth">MONTH</h3>
             <input type="text" id="month-input" placeholder="MM" min="0" max="12">
+            <h5 id="montherr">Must be valid Month </h5>
           </div>
-          <div id="year">
-            <h3>YEAR</h3>
+          <div class="error" id="year">
+            <h3 id="zyear">YEAR</h3>
             <input id="year-input" type="text" placeholder="YYYY" min="1900" max="2100">
+            <h5 id="yearerr">Must be valid Year </h5>
           </div>
         </div>
         <div id="result">
@@ -61,3 +65,7 @@
 </body>
 
 </html>
+
+
+
+<!-- 7972902979 -->
